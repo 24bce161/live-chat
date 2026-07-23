@@ -1,0 +1,24 @@
+{
+  "name": "livechat",
+  "version": "1.0.0",
+  "description": "Real-time chat application with React, Express, Socket.IO, and MongoDB",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "test": "cd server && npm test",
+    "test:all": "cd server && npm test && cd ../client && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["chat", "realtime", "socket.io", "react", "express", "mongodb"],
+  "license": "MIT"
+}
