@@ -5,6 +5,18 @@
   "framework": "vite",
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "https://live-chat-jxvq.onrender.com/api/$1"
+    },
+    {
+      "source": "/uploads/(.*)",
+      "destination": "https://live-chat-jxvq.onrender.com/uploads/$1"
+    },
+    {
+      "source": "/socket.io/(.*)",
+      "destination": "https://live-chat-jxvq.onrender.com/socket.io/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

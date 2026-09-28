@@ -3,9 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import LoadingSpinner from '../components/common/LoadingSpinner';
+import toast from 'react-hot-toast';
 
-// Same rules as the server (server/src/middleware/validate.js)
-const USERNAME_PATTERN = '[A-Za-z0-9_.]{3,30}';
 const MIN_PASSWORD_LENGTH = 6;
 
 // 0 = too short, 1 = weak ... 4 = strong. Only a hint — any password of 6+ characters is accepted.
@@ -34,9 +33,33 @@ const SignupPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const cleanName = name.trim();
+    const cleanEmail = email.trim().toLowerCase();
+
+    if (!cleanName) {
+      toast.error('Please enter a username');
+      return;
+    }
+    if (cleanName.length < 3 || cleanName.length > 30) {
+      toast.error('Username must be between 3 and 30 characters');
+      return;
+    }
+    if (!/^[a-zA-Z0-9_.]+$/.test(cleanName)) {
+      toast.error('Username can only contain letters, numbers, _ and .');
+      return;
+    }
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+    if (!password || password.length < MIN_PASSWORD_LENGTH) {
+      toast.error(`Password must be at least ${MIN_PASSWORD_LENGTH} characters`);
+      return;
+    }
+
     setIsSubmitting(true);
     try {
-      await signup(name.trim(), email, password);
+      await signup(cleanName, cleanEmail, password);
       navigate('/');
     } catch (err) {
       // Handled in auth context
@@ -64,8 +87,6 @@ const SignupPage = () => {
               id="signup-username"
               type="text"
               required
-              pattern={USERNAME_PATTERN}
-              title="3–30 characters: letters, numbers, _ or ."
               autoComplete="username"
               autoCapitalize="none"
               autoCorrect="off"
@@ -120,7 +141,7 @@ const SignupPage = () => {
 
           <button
             type="submit"
-            disabled={isSubmitting || !name || !email || password.length < MIN_PASSWORD_LENGTH}
+            disabled={isSubmitting}
             className="btn btn-primary w-full mt-6 py-3"
           >
             {isSubmitting ? <LoadingSpinner size={20} /> : 'Sign Up'}

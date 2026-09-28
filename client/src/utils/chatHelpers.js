@@ -64,5 +64,17 @@ export const isSeenByEveryone = (message, conversation) => {
 
 // The server always sends { message }, so this is the one place to read errors
 export const getErrorMessage = (error, fallback = 'Something went wrong') => {
-  return error.response?.data?.message || fallback;
+  if (error.response?.data?.message) {
+    return error.response.data.message;
+  }
+  if (error.response?.status === 405) {
+    return 'API route not supported by host. Connecting to backend...';
+  }
+  if (error.response?.status === 502 || error.response?.status === 503 || error.response?.status === 504) {
+    return 'Server is starting up (may take up to 30s on free hosting). Please retry in a moment.';
+  }
+  if (error.message === 'Network Error' || !error.response) {
+    return 'Cannot reach the server. Please check your internet connection or try again in a few seconds.';
+  }
+  return fallback;
 };

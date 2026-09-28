@@ -4,6 +4,8 @@ import { MessageCircle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 
+import toast from 'react-hot-toast';
+
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -13,9 +15,18 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const cleanUsername = username.trim();
+    if (!cleanUsername) {
+      toast.error('Please enter your username or email');
+      return;
+    }
+    if (!password) {
+      toast.error('Please enter your password');
+      return;
+    }
     setIsSubmitting(true);
     try {
-      await login(username, password);
+      await login(cleanUsername, password);
       navigate('/');
     } catch (err) {
       // Error handled by AuthContext via toast
@@ -70,7 +81,7 @@ const LoginPage = () => {
           
           <button 
             type="submit" 
-            disabled={isSubmitting || !username || !password}
+            disabled={isSubmitting}
             className="btn btn-primary w-full mt-6 py-3"
           >
             {isSubmitting ? <LoadingSpinner size={20} /> : 'Sign In'}

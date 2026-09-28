@@ -5,29 +5,45 @@ import { getErrorMessage } from '../utils/chatHelpers';
 
 const AuthContext = createContext();
 
+const safeStorage = {
+  getItem: (key) => {
+    try { return localStorage.getItem(key); } catch { return null; }
+  },
+  setItem: (key, val) => {
+    try { localStorage.setItem(key, val); } catch {}
+  },
+  removeItem: (key) => {
+    try { localStorage.removeItem(key); } catch {}
+  }
+};
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   // Only the token is saved in localStorage — the user is always loaded fresh from /auth/me
-  const [token, setToken] = useState(() => localStorage.getItem('token'));
+  const [token, setToken] = useState(() => safeStorage.getItem('token'));
   const [loading, setLoading] = useState(true);
 
   // On page load, check that the saved token is still valid
   useEffect(() => {
-    if (!localStorage.getItem('token')) {
+    const savedToken = safeStorage.getItem('token');
+    if (!savedToken) {
       setLoading(false);
       return;
     }
     api.get('/auth/me')
       .then(res => setUser(res.data.user))
       .catch(() => {
-        localStorage.removeItem('token');
+        safeStorage.removeItem('token');
         setToken(null);
       })
       .finally(() => setLoading(false));
   }, []);
 
   const saveSession = (data) => {
-    localStorage.setItem('token', data.token);
+    if (!data?.token || !data?.user) {
+      throw new Error('Authentication failed: Missing session token');
+    }
+    safeStorage.setItem('token', data.token);
     setToken(data.token);
     setUser(data.user);
   };
@@ -60,7 +76,7 @@ export const AuthProvider = ({ children }) => {
     } catch (error) {
       console.error(error);
     } finally {
-      localStorage.removeItem('token');
+      safeStorage.removeItem('token');
       setToken(null);
       setUser(null);
     }
