@@ -42,9 +42,7 @@ export const initializeSocket = (server) => {
   // Create Socket.IO server with CORS config
   io = new Server(server, {
     cors: {
-      origin: process.env.NODE_ENV === 'production'
-        ? (process.env.CLIENT_URL || 'http://localhost:5173')
-        : ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:5174', 'http://127.0.0.1:5174'],
+      origin: (origin, callback) => callback(null, true),
       methods: ['GET', 'POST'],
       credentials: true
     }

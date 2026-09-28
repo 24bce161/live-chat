@@ -7,6 +7,7 @@ export const createSocket = (token) => {
     autoConnect: false,
     reconnection: true,
     reconnectionDelay: 1000,
-    reconnectionAttempts: 10,
+    reconnectionAttempts: 20,
+    transports: ['websocket', 'polling'],
   });
 };

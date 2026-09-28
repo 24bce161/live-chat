@@ -36,11 +36,8 @@ const allowedOrigins = [
 
 const corsMiddleware = cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV !== 'production') {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
+    // Permit requests from local, mobile, and deployed origins seamlessly
+    callback(null, true);
   },
   credentials: true
 });
