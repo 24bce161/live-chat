@@ -26,8 +26,8 @@ const Header = () => {
 
   return (
     <header className="glass h-16 flex-between px-4 sticky top-0 z-40 border-b border-[var(--glass-border)]">
-      <h1 className="text-xl font-bold text-white drop-shadow-md">
-        LiveChat
+      <h1 className="text-xl font-bold text-primary tracking-tight">
+        NexusChat
       </h1>
 
       <div className="flex items-center gap-3 relative" ref={menuRef}>

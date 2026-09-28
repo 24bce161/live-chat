@@ -1,16 +1,16 @@
 import rateLimit from 'express-rate-limit';
 
-// Tests fire many requests in a row, so limits are switched off there
-const skipInTests = () => process.env.NODE_ENV === 'test';
+// Tests and development fire many requests in a row, so strict limits are skipped there
+const skipInDevOrTests = () => process.env.NODE_ENV !== 'production';
 
-// Auth limiter: 10 requests per 15 minutes (for login/signup)
+// Auth limiter: 100 requests per 15 minutes in production (skipped in development/test)
 export const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10,
+  max: 100,
   message: { message: 'Too many requests from this IP, please try again in 15 minutes' },
   standardHeaders: true,
   legacyHeaders: false,
-  skip: skipInTests,
+  skip: skipInDevOrTests,
 });
 
 // Message limiter: 30 messages per minute
@@ -20,7 +20,7 @@ export const messageLimiter = rateLimit({
   message: { message: 'Too many messages sent, please slow down' },
   standardHeaders: true,
   legacyHeaders: false,
-  skip: skipInTests,
+  skip: skipInDevOrTests,
 });
 
 // General limiter: 1000 API requests per 15 minutes.
@@ -31,5 +31,5 @@ export const generalLimiter = rateLimit({
   message: { message: 'Too many requests, please try again later' },
   standardHeaders: true,
   legacyHeaders: false,
-  skip: skipInTests,
+  skip: skipInDevOrTests,
 });

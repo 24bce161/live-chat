@@ -9,7 +9,7 @@ const ProtectedRoute = () => {
   if (loading) {
     return (
       <div className="h-screen w-full flex-center bg-primary">
-        <LoadingSpinner size={40} text="Loading LiveChat..." />
+        <LoadingSpinner size={40} text="Loading NexusChat..." />
       </div>
     );
   }

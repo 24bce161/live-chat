@@ -34,19 +34,19 @@ const LoginPage = () => {
           <h2 className="text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[var(--accent-start)] to-[var(--accent-end)]">
             Welcome back
           </h2>
-          <p className="text-secondary text-sm mt-2">Sign in to continue to LiveChat</p>
+          <p className="text-secondary text-sm mt-2">Sign in to continue to NexusChat</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="login-username" className="block text-sm font-medium mb-1 ml-1">Username</label>
+            <label htmlFor="login-username" className="block text-sm font-medium mb-1 ml-1">Username or Email</label>
             <input
               id="login-username"
               type="text"
               required
               autoComplete="username"
               className="input"
-              placeholder="Enter your username"
+              placeholder="Enter your username or email"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />

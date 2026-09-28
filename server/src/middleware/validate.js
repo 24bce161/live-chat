@@ -19,7 +19,7 @@ export const validateSignup = [
 ];
 
 export const validateLogin = [
-  body('username').trim().notEmpty().withMessage('Username is required'),
+  body('username').trim().notEmpty().withMessage('Username or email is required'),
   body('password').notEmpty().withMessage('Password is required')
 ];
 

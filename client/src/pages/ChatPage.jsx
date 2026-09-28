@@ -55,7 +55,7 @@ const ChatPage = () => {
         ) : (
           <EmptyState
             icon={MessageCircle}
-            title="Welcome to LiveChat"
+            title="Welcome to NexusChat"
             description="Select a conversation or start a new chat. Share your connection code so people can add you."
             action={
               <div className="w-64 mx-auto">

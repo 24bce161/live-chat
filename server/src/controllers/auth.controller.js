@@ -27,14 +27,24 @@ export const signup = asyncHandler(async (req, res) => {
 
 export const login = asyncHandler(async (req, res) => {
   const { username, password } = req.body;
+  const input = username?.trim();
 
-  // Usernames are matched ignoring case, so "John" and "john" both work
-  const user = await User.findOne({ name: username })
-    .collation(CASE_INSENSITIVE)
-    .select('+password');
+  if (!input) {
+    return res.status(400).json({ message: 'Username or email is required' });
+  }
+
+  // Allow signing in with either email or username (case-insensitive)
+  let user;
+  if (input.includes('@')) {
+    user = await User.findOne({ email: input.toLowerCase() }).select('+password');
+  } else {
+    user = await User.findOne({ name: input })
+      .collation(CASE_INSENSITIVE)
+      .select('+password');
+  }
 
   if (!user || !(await user.matchPassword(password))) {
-    return res.status(401).json({ message: 'Invalid username or password' });
+    return res.status(401).json({ message: 'Invalid username/email or password' });
   }
 
   res.json({
