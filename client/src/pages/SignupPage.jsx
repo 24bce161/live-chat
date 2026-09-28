@@ -67,6 +67,9 @@ const SignupPage = () => {
               pattern={USERNAME_PATTERN}
               title="3–30 characters: letters, numbers, _ or ."
               autoComplete="username"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck="false"
               className="input"
               placeholder="johndoe"
               value={name}
@@ -81,6 +84,9 @@ const SignupPage = () => {
               type="email"
               required
               autoComplete="email"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck="false"
               className="input"
               placeholder="you@example.com"
               value={email}

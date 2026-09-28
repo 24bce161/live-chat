@@ -4,7 +4,9 @@ import { asyncHandler } from '../utils/asyncHandler.js';
 import { formatUser } from '../utils/formatUser.js';
 
 export const signup = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body;
+  const name = req.body.name?.trim();
+  const email = req.body.email?.trim().toLowerCase();
+  const password = req.body.password;
 
   const emailTaken = await User.findOne({ email });
   if (emailTaken) {
@@ -12,7 +14,12 @@ export const signup = asyncHandler(async (req, res) => {
   }
 
   // Case-insensitive, so "John" can't sign up if "john" exists
-  const nameTaken = await User.findOne({ name }).collation(CASE_INSENSITIVE);
+  let nameTaken = await User.findOne({ name }).collation(CASE_INSENSITIVE);
+  if (!nameTaken) {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    nameTaken = await User.findOne({ name: { $regex: new RegExp(`^${escaped}$`, 'i') } });
+  }
+
   if (nameTaken) {
     return res.status(409).json({ message: 'Username is already taken' });
   }
@@ -41,6 +48,12 @@ export const login = asyncHandler(async (req, res) => {
     user = await User.findOne({ name: input })
       .collation(CASE_INSENSITIVE)
       .select('+password');
+
+    if (!user) {
+      const escaped = input.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      user = await User.findOne({ name: { $regex: new RegExp(`^${escaped}$`, 'i') } })
+        .select('+password');
+    }
   }
 
   if (!user || !(await user.matchPassword(password))) {

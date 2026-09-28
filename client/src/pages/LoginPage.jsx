@@ -45,6 +45,9 @@ const LoginPage = () => {
               type="text"
               required
               autoComplete="username"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck="false"
               className="input"
               placeholder="Enter your username or email"
               value={username}

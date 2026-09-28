@@ -21,7 +21,8 @@ api.interceptors.response.use(
   (error) => {
     // A wrong password on the login form is also a 401 — that must NOT reload the page,
     // otherwise the "Invalid username or password" message disappears before it can be read.
-    const isAuthForm = ['/auth/login', '/auth/signup'].includes(error.config?.url);
+    const url = error.config?.url || '';
+    const isAuthForm = url.endsWith('/auth/login') || url.endsWith('/auth/signup') || url.includes('/auth/login') || url.includes('/auth/signup');
 
     // Otherwise a 401 means the saved token expired or is invalid: sign out
     if (error.response?.status === 401 && !isAuthForm) {
