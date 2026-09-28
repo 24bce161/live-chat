@@ -1,0 +1,251 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- WhatsApp Style Scattered Monotonic Doodle Wallpaper Pattern -->
+  <g stroke="#000000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- 1. Speech Bubble (Top Left) -->
+    <g transform="translate(35, 30) rotate(-10)">
+      <path d="M 0 12 C 0 5.4 5.4 0 12 0 L 28 0 C 34.6 0 40 5.4 40 12 C 40 18.6 34.6 24 28 24 L 14 24 L 6 30 L 8 22 C 3.2 20.2 0 16.4 0 12 Z" />
+      <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" />
+      <circle cx="20" cy="12" r="1.5" fill="currentColor" stroke="none" />
+      <circle cx="28" cy="12" r="1.5" fill="#000000" stroke="none" />
+    </g>
+
+    <!-- 2. Star with sparkle (Top Middle Left) -->
+    <g transform="translate(145, 25) rotate(15)">
+      <polygon points="12,0 15,9 24,9 17,14 19,23 12,18 5,23 7,14 0,9 9,9" />
+      <circle cx="28" cy="4" r="1" fill="#000000" />
+    </g>
+
+    <!-- 3. Coffee / Tea Cup (Top Middle) -->
+    <g transform="translate(245, 35) rotate(-5)">
+      <path d="M 4 8 L 24 8 L 22 24 C 22 26.2 20.2 28 18 28 L 10 28 C 7.8 28 6 26.2 6 24 Z" />
+      <path d="M 24 11 C 26.5 11 28 12.5 28 15 C 28 17.5 26.5 19 24 19" />
+      <path d="M 9 2 Q 11 -2 13 2" />
+      <path d="M 15 2 Q 17 -2 19 2" />
+    </g>
+
+    <!-- 4. Paper Airplane (Top Middle Right) -->
+    <g transform="translate(345, 20) rotate(20)">
+      <path d="M 0 14 L 32 0 L 18 30 L 12 18 Z" />
+      <path d="M 12 18 L 32 0" />
+    </g>
+
+    <!-- 5. Heart (Top Right) -->
+    <g transform="translate(450, 30) rotate(-12)">
+      <path d="M 14 24 C 14 24 0 14 0 7 C 0 3.1 3.1 0 7 0 C 9.5 0 11.8 1.3 13 3.3 C 14.2 1.3 16.5 0 19 0 C 22.9 0 26 3.1 26 7 C 26 14 14 24 14 24 Z" />
+    </g>
+
+    <!-- 6. Smiley Face (Top Far Right) -->
+    <g transform="translate(535, 25) rotate(8)">
+      <circle cx="15" cy="15" r="14" />
+      <circle cx="10" cy="11" r="1.5" fill="#000000" stroke="none" />
+      <circle cx="20" cy="11" r="1.5" fill="#000000" stroke="none" />
+      <path d="M 8 17 Q 15 23 22 17" />
+    </g>
+
+    <!-- 7. Music Notes (Row 2 Left) -->
+    <g transform="translate(25, 135) rotate(-15)">
+      <path d="M 6 22 A 4 4 0 1 1 2 18 L 14 4 L 26 8 L 26 18 A 4 4 0 1 1 22 14 L 26 8 L 14 4 L 6 18" />
+    </g>
+
+    <!-- 8. Padlock (Row 2 Middle Left) -->
+    <g transform="translate(125, 140) rotate(10)">
+      <rect x="2" y="10" width="20" height="16" rx="3" />
+      <path d="M 6 10 V 6 A 6 6 0 0 1 18 6 V 10" />
+      <circle cx="12" cy="17" r="2" fill="#000000" />
+    </g>
+
+    <!-- 9. Camera (Row 2 Center) -->
+    <g transform="translate(225, 130) rotate(-8)">
+      <rect x="0" y="6" width="28" height="20" rx="4" />
+      <path d="M 8 6 L 10 2 L 18 2 L 20 6" />
+      <circle cx="14" cy="16" r="6" />
+      <circle cx="22" cy="10" r="1" fill="#000000" />
+    </g>
+
+    <!-- 10. Lightning Bolt (Row 2 Center Right) -->
+    <g transform="translate(330, 135) rotate(12)">
+      <polygon points="12,0 2,16 11,16 8,30 22,12 13,12" />
+    </g>
+
+    <!-- 11. Sun with Rays (Row 2 Right) -->
+    <g transform="translate(425, 125) rotate(0)">
+      <circle cx="15" cy="15" r="7" />
+      <path d="M 15 2 V 5 M 15 25 V 28 M 2 15 H 5 M 25 15 H 28 M 6 6 L 8 8 M 22 22 L 24 24 M 6 24 L 8 22 M 22 6 L 24 8" />
+    </g>
+
+    <!-- 12. Search Glass (Row 2 Far Right) -->
+    <g transform="translate(525, 135) rotate(-25)">
+      <circle cx="11" cy="11" r="9" />
+      <line x1="18" y1="18" x2="28" y2="28" stroke-width="2.2" />
+    </g>
+
+    <!-- 13. Moon & Stars (Row 3 Left) -->
+    <g transform="translate(40, 245) rotate(18)">
+      <path d="M 16 0 A 14 14 0 1 0 28 18 A 12 12 0 0 1 16 0 Z" />
+      <path d="M 2 4 L 4 2 L 6 4 L 4 6 Z" fill="#000000" />
+    </g>
+
+    <!-- 14. Headphones (Row 3 Middle Left) -->
+    <g transform="translate(135, 235) rotate(-10)">
+      <path d="M 2 16 A 14 14 0 0 1 30 16" />
+      <rect x="0" y="14" width="6" height="12" rx="2" fill="#000000" opacity="0.3" />
+      <rect x="26" y="14" width="6" height="12" rx="2" fill="#000000" opacity="0.3" />
+      <rect x="0" y="14" width="6" height="12" rx="2" />
+      <rect x="26" y="14" width="6" height="12" rx="2" />
+    </g>
+
+    <!-- 15. Plant Sprout (Row 3 Center) -->
+    <g transform="translate(235, 245) rotate(5)">
+      <path d="M 12 26 V 12" />
+      <path d="M 12 18 Q 2 12 4 4 Q 14 6 12 18" />
+      <path d="M 12 14 Q 22 8 20 0 Q 10 2 12 14" />
+    </g>
+
+    <!-- 16. Crown (Row 3 Center Right) -->
+    <g transform="translate(335, 235) rotate(-15)">
+      <path d="M 2 22 L 0 6 L 8 12 L 14 2 L 20 12 L 28 6 L 26 22 Z" />
+      <line x1="2" y1="25" x2="26" y2="25" />
+    </g>
+
+    <!-- 17. Flame / Fire (Row 3 Right) -->
+    <g transform="translate(435, 240) rotate(8)">
+      <path d="M 12 0 C 12 0 16 6 16 10 C 16 12 14.5 13.5 14.5 13.5 C 14.5 13.5 18 11 20 15 C 22 19 20 24 15 27 C 10 30 3 27 2 20 C 1 14 6 9 9 7 C 8 10 9 13 11 14 C 11 14 12 5 12 0 Z" />
+    </g>
+
+    <!-- 18. Gamepad (Row 3 Far Right) -->
+    <g transform="translate(520, 245) rotate(-12)">
+      <rect x="0" y="4" width="30" height="18" rx="7" />
+      <path d="M 7 13 H 13 M 10 10 V 16" />
+      <circle cx="21" cy="11" r="1.5" fill="#000000" />
+      <circle cx="25" cy="15" r="1.5" fill="#000000" />
+    </g>
+
+    <!-- 19. Clock (Row 4 Left) -->
+    <g transform="translate(30, 355) rotate(14)">
+      <circle cx="14" cy="14" r="13" />
+      <polyline points="14,6 14,14 19,14" />
+    </g>
+
+    <!-- 20. Gift Box (Row 4 Middle Left) -->
+    <g transform="translate(130, 350) rotate(-6)">
+      <rect x="2" y="10" width="22" height="16" rx="2" />
+      <rect x="0" y="6" width="26" height="5" rx="1" />
+      <line x1="13" y1="6" x2="13" y2="26" />
+      <path d="M 13 6 C 10 1 4 1 8 6 Z M 13 6 C 16 1 22 1 18 6 Z" />
+    </g>
+
+    <!-- 21. Lightbulb (Row 4 Center) -->
+    <g transform="translate(230, 355) rotate(10)">
+      <path d="M 7 24 H 17 M 9 28 H 15 M 12 0 A 10 10 0 0 0 4 15 C 6 18 7 20 7 24 H 17 C 17 20 18 18 20 15 A 10 10 0 0 0 12 0 Z" />
+    </g>
+
+    <!-- 22. Compass / Pin (Row 4 Center Right) -->
+    <g transform="translate(330, 345) rotate(-18)">
+      <circle cx="14" cy="14" r="13" />
+      <polygon points="14,4 18,14 14,24 10,14" fill="#000000" opacity="0.3" />
+      <polygon points="14,4 18,14 14,24 10,14" />
+    </g>
+
+    <!-- 23. Planet Saturn (Row 4 Right) -->
+    <g transform="translate(430, 350) rotate(22)">
+      <circle cx="14" cy="14" r="9" />
+      <ellipse cx="14" cy="14" rx="20" ry="5" transform="rotate(-20 14 14)" />
+    </g>
+
+    <!-- 24. Rocket (Row 4 Far Right) -->
+    <g transform="translate(530, 345) rotate(-35)">
+      <path d="M 12 0 C 20 4 22 16 20 24 L 4 24 C 2 16 4 4 12 0 Z" />
+      <circle cx="12" cy="11" r="3" />
+      <path d="M 4 18 L 0 26 M 20 18 L 24 26" />
+      <path d="M 8 24 L 12 30 L 16 24" />
+    </g>
+
+    <!-- 25. Trophy (Row 5 Left) -->
+    <g transform="translate(35, 465) rotate(-8)">
+      <path d="M 4 2 H 24 V 12 C 24 18 19 22 14 22 C 9 22 4 18 4 12 Z" />
+      <path d="M 4 6 H 0 V 10 C 0 13 3 14 4 14 M 24 6 H 28 V 10 C 28 13 25 14 24 14" />
+      <path d="M 14 22 V 27 M 8 27 H 20" />
+    </g>
+
+    <!-- 26. Shield with Checkmark (Row 5 Middle Left) -->
+    <g transform="translate(135, 460) rotate(12)">
+      <path d="M 12 2 L 2 6 V 14 C 2 20 12 26 12 26 C 12 26 22 20 22 14 V 6 Z" />
+      <polyline points="7,13 10,16 17,9" />
+    </g>
+
+    <!-- 27. Envelope / Mail (Row 5 Center) -->
+    <g transform="translate(230, 465) rotate(-5)">
+      <rect x="0" y="4" width="26" height="18" rx="3" />
+      <path d="M 0 6 L 13 15 L 26 6" />
+    </g>
+
+    <!-- 28. Sunglasses (Row 5 Center Right) -->
+    <g transform="translate(330, 470) rotate(8)">
+      <path d="M 0 6 Q 6 0 12 6 L 14 6 Q 20 0 26 6" />
+      <path d="M 0 6 C 0 13 10 15 11 8 Z" fill="currentColor" opacity="0.2" />
+      <path d="M 15 8 C 16 15 26 13 26 6 Z" fill="currentColor" opacity="0.2" />
+      <path d="M 0 6 C 0 13 10 15 11 8 Z" />
+      <path d="M 15 8 C 16 15 26 13 26 6 Z" />
+    </g>
+
+    <!-- 29. Cloud & Rain (Row 5 Right) -->
+    <g transform="translate(435, 460) rotate(-10)">
+      <path d="M 5 16 A 6 6 0 0 1 16 12 A 8 8 0 0 1 29 16 A 5 5 0 0 1 27 24 H 5 A 5 5 0 0 1 5 16 Z" />
+      <line x1="8" y1="26" x2="6" y2="30" />
+      <line x1="16" y1="26" x2="14" y2="30" />
+      <line x1="24" y1="26" x2="22" y2="30" />
+    </g>
+
+    <!-- 30. Hourglass (Row 5 Far Right) -->
+    <g transform="translate(530, 465) rotate(15)">
+      <path d="M 4 2 H 20 M 4 26 H 20" />
+      <path d="M 5 2 L 12 14 L 5 26 M 19 2 L 12 14 L 19 26" />
+      <polygon points="8,22 16,22 12,17" fill="currentColor" />
+    </g>
+
+    <!-- Filler Elements (Dots, Sparkles, Plus signs, Mini circles scattered across matrix) -->
+    <circle cx="95" cy="45" r="2" fill="currentColor" />
+    <circle cx="205" cy="55" r="1.5" fill="currentColor" />
+    <circle cx="305" cy="40" r="2.5" fill="currentColor" opacity="0.6" />
+    <circle cx="410" cy="65" r="2" fill="currentColor" />
+    <circle cx="500" cy="50" r="1.5" fill="currentColor" />
+
+    <path d="M 85 125 L 93 125 M 89 121 L 89 129" stroke-width="1.2" />
+    <path d="M 195 165 L 201 165 M 198 162 L 198 168" stroke-width="1.2" />
+    <path d="M 295 115 L 301 115 M 298 112 L 298 118" stroke-width="1.2" />
+    <path d="M 395 175 L 401 175 M 398 172 L 398 178" stroke-width="1.2" />
+    <path d="M 495 115 L 501 115 M 498 112 L 498 118" stroke-width="1.2" />
+
+    <circle cx="85" cy="225" r="2" fill="currentColor" />
+    <circle cx="195" cy="275" r="2" fill="currentColor" />
+    <circle cx="305" cy="225" r="1.5" fill="currentColor" />
+    <circle cx="405" cy="285" r="2.5" fill="currentColor" opacity="0.6" />
+    <circle cx="495" cy="225" r="2" fill="currentColor" />
+
+    <path d="M 75 330 L 81 330 M 78 327 L 78 333" stroke-width="1.2" />
+    <path d="M 185 320 L 191 320 M 188 317 L 188 323" stroke-width="1.2" />
+    <path d="M 290 310 L 296 310 M 293 307 L 293 313" stroke-width="1.2" />
+    <path d="M 390 325 L 396 325 M 393 322 L 393 328" stroke-width="1.2" />
+    <path d="M 490 310 L 496 310 M 493 307 L 493 313" stroke-width="1.2" />
+
+    <circle cx="90" cy="430" r="2" fill="currentColor" />
+    <circle cx="190" cy="445" r="1.5" fill="currentColor" />
+    <circle cx="295" cy="435" r="2.5" fill="currentColor" opacity="0.6" />
+    <circle cx="395" cy="440" r="2" fill="currentColor" />
+    <circle cx="495" cy="430" r="1.5" fill="currentColor" />
+
+    <circle cx="80" cy="540" r="2" fill="currentColor" />
+    <circle cx="190" cy="535" r="2.5" fill="currentColor" opacity="0.6" />
+    <circle cx="290" cy="545" r="1.5" fill="currentColor" />
+    <circle cx="390" cy="535" r="2" fill="currentColor" />
+    <circle cx="490" cy="540" r="2" fill="currentColor" />
+
+    <!-- Extra squiggles & stars -->
+    <path d="M 15 90 Q 20 85 25 90 T 35 90" stroke-width="1.2" />
+    <path d="M 270 190 Q 275 185 280 190 T 290 190" stroke-width="1.2" />
+    <path d="M 470 200 Q 475 195 480 200 T 490 200" stroke-width="1.2" />
+    <path d="M 170 410 Q 175 405 180 410 T 190 410" stroke-width="1.2" />
+    <path d="M 370 415 Q 375 410 380 415 T 390 415" stroke-width="1.2" />
+  </g>
+</svg>

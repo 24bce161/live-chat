@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment files (keep the .env.example templates)
+.env
+.env.*
+!.env.example
+
+# Build output (Vercel/Render build this themselves)
+client/dist/
+
+# Files uploaded by users (keep the empty folder)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
