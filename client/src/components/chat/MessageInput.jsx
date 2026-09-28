@@ -165,7 +165,7 @@ const MessageInput = ({ conversationId, onSend }) => {
           {sending ? (
             <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
           ) : (
-            <Send size={22} className="ml-1" />
+            <Send size={20} />
           )}
         </button>
       </div>
